@@ -38,7 +38,7 @@ def test_101_boolean_evaluation( ):
     module = cache_import_module( f"{PACKAGE_NAME}.objects" )
     obj = module.Falsifier( )
     assert not obj
-    assert False == bool( obj )
+    assert False == bool( obj ) # noqa: E712
 
 
 def test_102_equality( ):
