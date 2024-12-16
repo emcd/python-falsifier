@@ -45,7 +45,57 @@
    :target: https://pypi.org/project/falsifier/
 
 
-.. todo:: Provide content.
+🎭 A very simple Python library package which provides a **base class for
+falsey objects** - objects that evaluate to ``False`` in boolean contexts.
+
+
+Key Features ⭐
+===============================================================================
+
+* 🎭 **Falsey Base Class**: A foundational class for creating objects that
+  evaluate to ``False`` in boolean contexts, with identity-based equality
+  comparisons.
+* 🧱 **Extensible Base**: Can derive specialized falsey types, such as sentinel
+  objects or absence indicators.
+
+
+Installation 📦
+===============================================================================
+
+::
+
+    pip install falsifier
+
+
+Examples 💡
+===============================================================================
+
+The ``Falsifier`` class provides a base for creating objects that evaluate to
+``False`` in boolean contexts:
+
+>>> from falsifier import Falsifier
+>>> obj = Falsifier( )
+>>> bool( obj )
+False
+
+Identity-based equality ensures each instance is only equal to itself:
+
+>>> obj2 = Falsifier( )
+>>> obj == obj2
+False
+>>> obj == obj
+True
+
+
+Use Cases 🎯
+===============================================================================
+
+* 🎭 **Sentinel Objects**: Base class for creating unique sentinel objects that
+  evaluate to ``False``.
+* 🚫 **Absence Indicators**: Foundation for creating objects that represent
+  absence or invalidity when ``None`` or ``False`` may be valid.
+* 🔍 **Missing Value Types**: When you need distinct objects to represent
+  different kinds of missing or invalid values.
 
 
 `More Flair <https://www.imdb.com/title/tt0151804/characters/nm0431918>`_
@@ -82,8 +132,6 @@
 .. image:: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json
    :alt: Ruff
    :target: https://github.com/astral-sh/ruff
-
-
 
 .. image:: https://img.shields.io/pypi/implementation/falsifier
    :alt: PyPI - Implementation
