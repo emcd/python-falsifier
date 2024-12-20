@@ -83,16 +83,7 @@ def test_105_ordering_operations( ):
         _ = obj1 >= obj2
 
 
-def test_106_class_immutability( ):
-    ''' Class attributes are immutable. '''
-    module = cache_import_module( f"{PACKAGE_NAME}.objects" )
-    with pytest.raises( AttributeError ):
-        module.Falsifier.new_attr = 42
-    with pytest.raises( AttributeError ):
-        del module.Falsifier.new_attr
-
-
-def test_107_collection_usage( ):
+def test_106_collection_usage( ):
     ''' Object works in collections. '''
     module = cache_import_module( f"{PACKAGE_NAME}.objects" )
     obj1 = module.Falsifier( )

@@ -24,14 +24,8 @@
 from . import __
 
 
-class Falsifier( metaclass = __.ImmutableClass ): # pylint: disable=eq-without-hash
-    ''' Produces falsey objects.
-
-        Why not something already in Python?
-        :py:class:`object` produces truthy objects.
-        :py:class:`types.NoneType` "produces" falsey ``None`` singleton.
-        :py:class:`typing_extensions.NoDefault` is truthy singleton.
-    '''
+class Falsifier( metaclass = __.ImmutableClass ):
+    ''' Produces falsey objects. '''
 
     def __bool__( self ) -> bool: return False
 
