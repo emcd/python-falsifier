@@ -78,6 +78,7 @@ dependencies = [
   'coverage[toml]',
   'furo',
   'icecream',
+  'isort',
   'packaging',
   'pre-commit',
   'pylint',
@@ -176,8 +177,6 @@ split_on_trailing_comma = true
 #star_first = false
 #supported_extensions = [ 'pxd', 'py', 'pyi', 'pyx' ]
 use_parentheses = true
-
-
 
 # https://mypy.readthedocs.io/en/stable/config_file.html
 [tool.mypy]
