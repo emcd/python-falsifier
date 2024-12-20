@@ -28,7 +28,7 @@ from . import objects
 from .objects import *
 
 
-__version__ = '2.0a0'
+__version__ = '2.1a0'
 
 
 __.reclassify_modules( __name__, recursive = True )
