@@ -49,16 +49,6 @@
 falsey objects** - objects that evaluate to ``False`` in boolean contexts.
 
 
-Key Features ⭐
-===============================================================================
-
-* 🎭 **Falsey Base Class**: A foundational class for creating objects that
-  evaluate to ``False`` in boolean contexts, with identity-based equality
-  comparisons.
-* 🧱 **Extensible Base**: Can derive specialized falsey types, such as sentinel
-  objects or absence indicators.
-
-
 Installation 📦
 ===============================================================================
 
@@ -90,12 +80,10 @@ True
 Use Cases 🎯
 ===============================================================================
 
-* 🎭 **Sentinel Objects**: Base class for creating unique sentinel objects that
+* 🚩 **Sentinel Objects**: Base class for creating unique sentinel objects that
   evaluate to ``False``.
-* 🚫 **Absence Indicators**: Foundation for creating objects that represent
+* 🕳️ **Absence Indicators**: Foundation for creating objects that represent
   absence or invalidity when ``None`` or ``False`` may be valid.
-* 🔍 **Missing Value Types**: When you need distinct objects to represent
-  different kinds of missing or invalid values.
 
 
 `More Flair <https://www.imdb.com/title/tt0151804/characters/nm0431918>`_
