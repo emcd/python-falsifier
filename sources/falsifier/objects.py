@@ -24,7 +24,7 @@
 from . import __
 
 
-class Falsifier( metaclass = __.ImmutableClass ):
+class Falsifier:
     ''' Produces falsey objects. '''
 
     def __bool__( self ) -> bool: return False
