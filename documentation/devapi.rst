@@ -1,5 +1,5 @@
-.. vim: set fileencoding=utf-8:
-.. -*- coding: utf-8 -*-
+.. vim: set filetype=rst fileencoding=utf-8:
+.. -*- mode: rst ; coding: utf-8 -*-
 .. +--------------------------------------------------------------------------+
    |                                                                          |
    | Licensed under the Apache License, Version 2.0 (the "License");          |
@@ -20,12 +20,16 @@
 :tocdepth: 3
 
 
+*******************************************************************************
 Internal Development Interface
+*******************************************************************************
+
+
+Package ``falsifier.__``
 ===============================================================================
 
 
-Module ``falsifier.__``
+Module ``falsifier.__.imports``
 -------------------------------------------------------------------------------
 
-.. automodule:: falsifier.__
-   :ignore-module-all: true
+.. automodule:: falsifier.__.imports

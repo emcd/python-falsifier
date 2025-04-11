@@ -16,10 +16,28 @@
    |                                                                          |
    +--------------------------------------------------------------------------+
 
+:tocdepth: 4
+
 
 *******************************************************************************
-Release Notes
+API
 *******************************************************************************
 
 
-.. include:: ../../changelog.rst
+Package ``falsifier``
+===============================================================================
+
+A base class for creating objects that evaluate to ``False`` in boolean
+contexts. This functionality is useful for creating sentinel objects, absence
+indicators, and other specialized falsey types that need distinct identities
+and proper comparison behavior.
+
+* ``Falsifier``: A base class that produces objects which evaluate to ``False``
+  in boolean contexts. Each instance has a unique identity and supports proper
+  equality comparison and hashing.
+
+
+Module ``falsifier.objects``
+-------------------------------------------------------------------------------
+
+.. automodule:: falsifier.objects

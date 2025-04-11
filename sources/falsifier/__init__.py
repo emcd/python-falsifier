@@ -22,8 +22,8 @@
 
 
 from . import __
-from . import exceptions
-from . import objects
+# --- BEGIN: Injected by Copier ---
+# --- END: Injected by Copier ---
 
 from .objects import *
 

@@ -48,7 +48,7 @@ def test_102_equality( ):
     obj2 = module.Falsifier( )
     assert obj1 == obj1
     assert obj1 != obj2
-    assert not (obj1 == obj2)
+    assert not (obj1 == obj2) # noqa: SIM201
 
 
 def test_103_hash_uniqueness( ):

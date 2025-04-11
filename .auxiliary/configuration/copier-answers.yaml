@@ -1,16 +1,19 @@
 # Changes here will be overwritten by Copier
-_commit: v1.6
+_commit: v1.16
 _src_path: gh:emcd/python-project-common
 author_email: emcd@users.noreply.github.com
 author_name: Eric McDonald
 description: Production of falsey objects.
 development_status: 5 - Production/Stable
 distribution_name: falsifier
+enable_cli: false
 enable_property_tests: false
 enable_publication: true
 enable_rust_extension: false
 gh_owner: emcd
+include_data_resources: false
 inject_docstring_utils: false
+inject_exceptions: false
 inject_foundations: true
 inject_immutables: true
 package_name: falsifier
