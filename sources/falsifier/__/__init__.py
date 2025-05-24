@@ -28,7 +28,4 @@ from classcore.utilities import qualify_class_name as calculate_fqname
 from .imports import *
 
 
-__all__ = (
-    'calculate_fqname',
-    'reclassify_modules',
-)
+__all__ = ( )
