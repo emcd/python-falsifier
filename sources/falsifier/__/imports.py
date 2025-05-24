@@ -32,5 +32,8 @@ import typing_extensions as typx
 # --- BEGIN: Injected by Copier ---
 # --- END: Injected by Copier ---
 
+from classcore.standard.modules import reclassify_modules
+from classcore.utilities import qualify_class_name as calculate_fqname
+
 
 ComparisonResult: typx.TypeAlias = bool | types.NotImplementedType
