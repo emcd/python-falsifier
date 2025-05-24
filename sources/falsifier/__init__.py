@@ -21,7 +21,7 @@
 ''' Production of falsey objects. '''
 
 
-from . import __
+from .__ import reclassify_modules
 # --- BEGIN: Injected by Copier ---
 # --- END: Injected by Copier ---
 
@@ -31,4 +31,4 @@ from .objects import *
 __version__ = '2.1a0'
 
 
-__.reclassify_modules( __name__, recursive = True )
+reclassify_modules( __name__, recursive = True )

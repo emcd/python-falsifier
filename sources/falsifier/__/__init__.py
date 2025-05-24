@@ -22,8 +22,13 @@
 
 
 # Expose everything from internal modules.
-from .immutables import *  # Managed by Copier.
+# from .immutables import *  # Managed by Copier. # MODIFIED: Removed old immutables import
+from classcore.standard.modules import reclassify_modules as reclassify_modules
+from classcore.utilities import qualify_class_name as calculate_fqname
 from .imports import *
 
 
-__all__ = ( )
+__all__ = (
+    'calculate_fqname',
+    'reclassify_modules',
+)
