@@ -31,7 +31,7 @@ Package ``falsifier``
 .. automodule:: falsifier
 
 
-Module ``falsifier.objects``
+Module ``falsifier.classes``
 -------------------------------------------------------------------------------
 
-.. automodule:: falsifier.objects
+.. automodule:: falsifier.classes

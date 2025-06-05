@@ -35,3 +35,9 @@ Module ``falsifier.__.imports``
 -------------------------------------------------------------------------------
 
 .. automodule:: falsifier.__.imports
+
+
+Module ``falsifier.__.nomina``
+-------------------------------------------------------------------------------
+
+.. automodule:: falsifier.__.nomina

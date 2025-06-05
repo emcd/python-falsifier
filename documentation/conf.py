@@ -80,6 +80,7 @@ nitpick_ignore = [
       "v, remove specified key and return the corresponding value." ),
     # Type annotation weirdnesses.
     ( 'py:class', "Doc" ),
+    ( 'py:class', "builtins.NotImplementedType" ),
     ( 'py:class', "types.Annotated" ),
     ( 'py:class', "types.NoneType" ),
     ( 'py:class', "typing_extensions.Any" ),

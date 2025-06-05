@@ -31,7 +31,7 @@ from . import __
 # --- BEGIN: Injected by Copier ---
 # --- END: Injected by Copier ---
 
-from .objects import *
+from .classes import *
 
 
 __version__ = '2.1a0'

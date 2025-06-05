@@ -25,17 +25,19 @@ import pytest
 
 from . import PACKAGE_NAME, cache_import_module
 
+MODULE_QNAME = f"{PACKAGE_NAME}.classes"
+
 
 def test_100_instantiation( ):
     ''' Class instantiates. '''
-    module = cache_import_module( f"{PACKAGE_NAME}.objects" )
+    module = cache_import_module( MODULE_QNAME )
     obj = module.Falsifier( )
     assert isinstance( obj, module.Falsifier )
 
 
 def test_101_boolean_evaluation( ):
     ''' Object evaluates to False. '''
-    module = cache_import_module( f"{PACKAGE_NAME}.objects" )
+    module = cache_import_module( MODULE_QNAME )
     obj = module.Falsifier( )
     assert not obj
     assert False == bool( obj ) # noqa: E712
@@ -43,7 +45,7 @@ def test_101_boolean_evaluation( ):
 
 def test_102_equality( ):
     ''' Object equality is identity-based. '''
-    module = cache_import_module( f"{PACKAGE_NAME}.objects" )
+    module = cache_import_module( MODULE_QNAME )
     obj1 = module.Falsifier( )
     obj2 = module.Falsifier( )
     assert obj1 == obj1
@@ -53,7 +55,7 @@ def test_102_equality( ):
 
 def test_103_hash_uniqueness( ):
     ''' Object hashes are unique. '''
-    module = cache_import_module( f"{PACKAGE_NAME}.objects" )
+    module = cache_import_module( MODULE_QNAME )
     obj1 = module.Falsifier( )
     obj2 = module.Falsifier( )
     assert hash( obj1 ) != hash( obj2 )
@@ -62,15 +64,15 @@ def test_103_hash_uniqueness( ):
 
 def test_104_string_representations( ):
     ''' Object has expected string representations. '''
-    module = cache_import_module( f"{PACKAGE_NAME}.objects" )
+    module = cache_import_module( MODULE_QNAME )
     obj = module.Falsifier( )
     assert 'False_' == str( obj )
-    assert f'{PACKAGE_NAME}.objects.Falsifier( )' == repr( obj )
+    assert f'{MODULE_QNAME}.Falsifier( )' == repr( obj )
 
 
 def test_105_ordering_operations( ):
     ''' Object does not support ordering. '''
-    module = cache_import_module( f"{PACKAGE_NAME}.objects" )
+    module = cache_import_module( MODULE_QNAME )
     obj1 = module.Falsifier( )
     obj2 = module.Falsifier( )
     with pytest.raises( TypeError ):
@@ -85,7 +87,7 @@ def test_105_ordering_operations( ):
 
 def test_106_collection_usage( ):
     ''' Object works in collections. '''
-    module = cache_import_module( f"{PACKAGE_NAME}.objects" )
+    module = cache_import_module( MODULE_QNAME )
     obj1 = module.Falsifier( )
     obj2 = module.Falsifier( )
     unique_set = { obj1, obj2, obj1 }
@@ -99,7 +101,7 @@ def test_106_collection_usage( ):
 
 def test_900_docstring_sanity( ):
     ''' Class has valid docstring. '''
-    module = cache_import_module( f"{PACKAGE_NAME}.objects" )
+    module = cache_import_module( MODULE_QNAME )
     assert hasattr( module.Falsifier, '__doc__' )
     assert isinstance( module.Falsifier.__doc__, str )
     assert module.Falsifier.__doc__
