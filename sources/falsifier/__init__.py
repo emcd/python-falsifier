@@ -18,7 +18,13 @@
 #============================================================================#
 
 
-''' Production of falsey objects. '''
+''' Production of falsey objects.
+
+    Provides a base class for creating objects that evaluate to ``False`` in
+    boolean contexts. This functionality is useful for creating sentinel
+    objects, absence indicators, and other specialized falsey types which need
+    distinct identities and proper comparison behavior.
+'''
 
 
 from . import __
@@ -31,4 +37,5 @@ from .objects import *
 __version__ = '2.1a0'
 
 
-__.reclassify_modules( __name__, recursive = True )
+__.ccstd.dynadoc.assign_module_docstring( __name__ )
+__.ccstd.reclassify_modules( __name__, recursive = True )

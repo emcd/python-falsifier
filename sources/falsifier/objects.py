@@ -18,7 +18,7 @@
 #============================================================================#
 
 
-''' Falsifier object. '''
+''' Falsifier production. '''
 
 
 from . import __
@@ -32,7 +32,9 @@ class Falsifier:
     def __hash__( self ) -> int: return id( self )
 
     def __repr__( self ) -> str:
-        return "{fqname}( )".format( fqname = __.calculate_fqname( self ) )
+        return "{fqname}( )".format(
+            fqname = __.ccutils.qualify_class_name(
+                type( self ) ) )
 
     def __str__( self ) -> str: return 'False_'
 

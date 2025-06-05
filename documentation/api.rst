@@ -1,5 +1,5 @@
-.. vim: set fileencoding=utf-8:
-.. -*- coding: utf-8 -*-
+.. vim: set filetype=rst fileencoding=utf-8:
+.. -*- mode: rst ; coding: utf-8 -*-
 .. +--------------------------------------------------------------------------+
    |                                                                          |
    | Licensed under the Apache License, Version 2.0 (the "License");          |
@@ -16,7 +16,8 @@
    |                                                                          |
    +--------------------------------------------------------------------------+
 
-:tocdepth: 4
+
+:tocdepth: 3
 
 
 *******************************************************************************
@@ -27,14 +28,7 @@ API
 Package ``falsifier``
 ===============================================================================
 
-A base class for creating objects that evaluate to ``False`` in boolean
-contexts. This functionality is useful for creating sentinel objects, absence
-indicators, and other specialized falsey types that need distinct identities
-and proper comparison behavior.
-
-* ``Falsifier``: A base class that produces objects which evaluate to ``False``
-  in boolean contexts. Each instance has a unique identity and supports proper
-  equality comparison and hashing.
+.. automodule:: falsifier
 
 
 Module ``falsifier.objects``

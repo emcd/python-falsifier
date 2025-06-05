@@ -28,6 +28,8 @@ Internal Development Interface
 Package ``falsifier.__``
 ===============================================================================
 
+.. automodule:: falsifier.__
+
 
 Module ``falsifier.__.imports``
 -------------------------------------------------------------------------------
