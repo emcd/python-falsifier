@@ -18,23 +18,15 @@
 #============================================================================#
 
 
-''' Family of exceptions for package API.
-
-    * ``Omniexception``: Base for all package exceptions
-    * ``Omnierror``: Base for all package errors
-'''
+''' Common names and type aliases. '''
 
 
-from . import __
+from . import imports as __
 
 
-class Omniexception( BaseException ):
-    ''' Base for all exceptions raised by package API. '''
-    # TODO: Class and instance attribute concealment and immutability.
-
-    _attribute_visibility_includes_: __.cabc.Collection[ str ] = (
-        frozenset( ( '__cause__', '__context__', ) ) )
+ComparisonResult: __.typx.TypeAlias = bool | __.types.NotImplementedType
+NominativeArguments: __.typx.TypeAlias = __.cabc.Mapping[ str, __.typx.Any ]
+PositionalArguments: __.typx.TypeAlias = __.cabc.Sequence[ __.typx.Any ]
 
 
-class Omnierror( Omniexception, Exception ):
-    ''' Base for error exceptions raised by package API. '''
+package_name = __name__.split( '.', maxsplit = 1 )[ 0 ]

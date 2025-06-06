@@ -20,7 +20,7 @@
 Objects
 ===============================================================================
 
-The ``falsifier.objects`` module provides the ``Falsifier`` class, which serves
+The ``falsifier.classes`` module provides the ``Falsifier`` class, which serves
 as a base for creating objects that evaluate to ``False`` in boolean contexts.
 
 Basic Usage
@@ -37,7 +37,7 @@ The ``Falsifier`` class can be used directly to create falsey objects:
     >>> str( obj )   # Simple string form
     'False_'
     >>> repr( obj )  # Detailed representation
-    'falsifier.objects.Falsifier( )'
+    'falsifier.classes.Falsifier( )'
 
 Identity and Equality
 -------------------------------------------------------------------------------

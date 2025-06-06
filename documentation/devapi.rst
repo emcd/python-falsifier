@@ -1,5 +1,5 @@
-.. vim: set fileencoding=utf-8:
-.. -*- coding: utf-8 -*-
+.. vim: set filetype=rst fileencoding=utf-8:
+.. -*- mode: rst ; coding: utf-8 -*-
 .. +--------------------------------------------------------------------------+
    |                                                                          |
    | Licensed under the Apache License, Version 2.0 (the "License");          |
@@ -17,25 +17,27 @@
    +--------------------------------------------------------------------------+
 
 
-.. include:: ../../README.rst
+:tocdepth: 3
 
 
-Table of Contents
+*******************************************************************************
+Internal Development Interface
+*******************************************************************************
+
+
+Package ``falsifier.__``
 ===============================================================================
 
-.. toctree::
-   :maxdepth: 2
-
-   examples/index
-   api
-   changelog
-   contribution/index
-   license
+.. automodule:: falsifier.__
 
 
-Indices
-===============================================================================
+Module ``falsifier.__.imports``
+-------------------------------------------------------------------------------
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. automodule:: falsifier.__.imports
+
+
+Module ``falsifier.__.nomina``
+-------------------------------------------------------------------------------
+
+.. automodule:: falsifier.__.nomina
