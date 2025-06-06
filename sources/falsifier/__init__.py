@@ -34,7 +34,7 @@ from . import __
 from .classes import *
 
 
-__version__ = '2.1rc0'
+__version__ = '2.1'
 
 
 __.ccstd.dynadoc.assign_module_docstring( __name__ )
