@@ -21,8 +21,15 @@
 Release Notes
 *******************************************************************************
 
-
 .. towncrier release notes start
+
+Falsifier 2.1 (2025-06-05)
+==========================
+
+Enhancements
+------------
+
+- Rename 'objects' module to 'classes'.
 
 
 Falsifier 2.0 (2024-12-20)
