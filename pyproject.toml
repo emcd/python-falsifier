@@ -55,6 +55,7 @@ year-of-origin = 2024
 gha-runners = [
   '/home/runner/work/python-falsifier/python-falsifier/',
   '/Users/runner/work/python-falsifier/python-falsifier/',
+  'C:\a\python-falsifier\python-falsifier\',
   'D:\a\python-falsifier\python-falsifier\',
 ]
 [tool.coverage.run]
@@ -96,9 +97,7 @@ description = ''' Development environment. '''
 dependencies = [
   'Jinja2',
   'coverage[toml]',
-  'emcd-projects',
   'furo',
-  'icecream',
   'packaging',
   'pre-commit',
   'pyright',
