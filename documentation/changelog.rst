@@ -23,6 +23,16 @@ Release Notes
 
 .. towncrier release notes start
 
+Falsifier 2.1.1 (2025-07-02)
+============================
+
+Enhancements
+------------
+
+- Internal improvement to use 'classcore.finalize_module' rather than the
+  deprecated 'classcore.reclassify_modules'.
+
+
 Falsifier 2.1 (2025-06-05)
 ==========================
 
