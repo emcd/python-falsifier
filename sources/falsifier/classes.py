@@ -33,8 +33,7 @@ class Falsifier:
 
     def __repr__( self ) -> str:
         return "{fqname}( )".format(
-            fqname = __.ccutils.qualify_class_name(
-                type( self ) ) )
+            fqname = __.ccutils.qualify_class_name( type( self ) ) )
 
     def __str__( self ) -> str: return 'False_'
 
