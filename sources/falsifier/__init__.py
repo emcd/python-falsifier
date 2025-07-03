@@ -37,5 +37,4 @@ from .classes import *
 __version__ = '2.1'
 
 
-__.ccstd.dynadoc.assign_module_docstring( __name__ )
-__.ccstd.reclassify_modules( __name__, recursive = True )
+__.ccstd.finalize_module( __name__, recursive = True )
