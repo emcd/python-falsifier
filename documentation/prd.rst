@@ -32,65 +32,24 @@ types where ``None`` or ``False`` may be semantically meaningful values.
 Target Audience
 ===============================================================================
 
-Primary Users
--------------------------------------------------------------------------------
-
 * **Library developers** creating packages that need custom sentinel values or
   absence indicators with falsey semantics
 * **Application developers** implementing domain-specific falsey types for
   state machines, validators, or data processing pipelines
 * **Framework authors** building systems requiring distinct falsey markers
 
-User Stories
+Core Capabilities
 ===============================================================================
 
-Core Functionality
--------------------------------------------------------------------------------
+The library provides a single ``Falsifier`` class that:
 
-**Story 1: Create Falsey Objects**
-
-    As a library developer, I want to create objects that evaluate to
-    ``False`` in boolean contexts so that I can represent absence or
-    invalidity while maintaining object identity.
-
-    **Acceptance Criteria:**
-
-    * Objects instantiated from ``Falsifier`` evaluate to ``False`` with ``bool()``
-    * Objects maintain distinct identities via ``id()``
-    * Objects are usable in conditional expressions
-
-**Story 2: Identity-Based Equality**
-
-    As a developer, I want falsey objects to use identity-based comparison so
-    that each instance is unique and distinguishable.
-
-    **Acceptance Criteria:**
-
-    * Instances compare equal only to themselves (``obj == obj`` is ``True``)
-    * Different instances are never equal (``obj1 == obj2`` is ``False``)
-    * Identity checks work correctly (``obj is obj`` is ``True``)
-
-**Story 3: Hashable Instances**
-
-    As a developer, I want falsey objects to be hashable so that I can use
-    them in sets and as dictionary keys.
-
-    **Acceptance Criteria:**
-
-    * Instances are hashable via identity-based hashing
-    * Instances can be added to sets without errors
-    * Instances can be used as dictionary keys
-
-**Story 4: Derive Custom Types**
-
-    As a developer, I want to subclass ``Falsifier`` to create
-    domain-specific falsey types with custom string representations.
-
-    **Acceptance Criteria:**
-
-    * Subclasses inherit falsey behavior
-    * Subclasses can override ``__str__`` and ``__repr__``
-    * Subclasses maintain identity-based equality
+* Evaluates to ``False`` in boolean contexts while maintaining distinct object
+  identity
+* Uses identity-based comparison so each instance is unique and distinguishable
+* Implements hashable protocol enabling use in sets and as dictionary keys
+* Supports subclassing for creating domain-specific falsey types with custom
+  string representations
+* Maintains compatibility with standard Python object protocols
 
 Non-Goals
 ===============================================================================
