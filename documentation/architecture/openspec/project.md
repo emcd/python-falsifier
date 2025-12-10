@@ -35,7 +35,7 @@ This package is a simple Python library that provides a base class for falsey ob
 
 ### Git Workflow
 - **Changelog**: Managed by `towncrier`. Changes must include a fragment in `.auxiliary/data/towncrier`.
-- **Commits**: Should reference changelog fragments where appropriate.
+- **Commits**: Should follow standard conventions (short subject, detailed body).
 
 ## Domain Context
 - **Falsey Objects**: Objects where `bool(obj)` is `False`.
