@@ -1,7 +1,7 @@
 # Project Context
 
 ## Purpose
-`falsifier` is a simple Python library that provides a base class for falsey objects—objects that evaluate to `False` in boolean contexts. It is designed to create unique sentinel objects or absence indicators where `None` or `False` might be valid values, ensuring identity-based equality.
+This package is a simple Python library that provides a base class for falsey objects—objects that evaluate to `False` in boolean contexts. It is designed to create unique sentinel objects or absence indicators where `None` or `False` might be valid values, ensuring identity-based equality.
 
 ## Tech Stack
 - **Language**: Python >= 3.10
