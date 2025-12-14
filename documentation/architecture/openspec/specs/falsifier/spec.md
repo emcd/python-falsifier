@@ -1,7 +1,7 @@
 # Falsifier
 
 ## Purpose
-The `falsifier` library provides a minimal, focused foundation for creating falsey objects in Python that maintain distinct identities. It serves developers who need sentinel values, absence indicators, or custom falsey types where `None` or `False` may be semantically meaningful values.
+The library provides a minimal, focused foundation for creating falsey objects in Python that maintain distinct identities. It serves developers who need sentinel values, absence indicators, or custom falsey types where `None` or `False` may be semantically meaningful values.
 
 ## Requirements
 
