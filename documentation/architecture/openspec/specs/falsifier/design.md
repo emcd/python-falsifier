@@ -1,7 +1,7 @@
 # Falsifier Design
 
 ## Context
-The `falsifier` library is designed to provide a standard way to create falsey objects with identity. It avoids the overhead and complexity of more feature-rich libraries when simple sentinel values are needed.
+The library is designed to provide a standard way to create falsey objects with identity. It avoids the overhead and complexity of more feature-rich libraries when simple sentinel values are needed.
 
 ## Goals
 - Provide a `Falsifier` class that behaves like `False` but has distinct identity.
@@ -42,7 +42,7 @@ The library depends only on:
 All public APIs include complete type annotations compatible with `mypy` and `pyright`.
 
 ### Cross-Version Compatibility
-The library supports all actively maintained Python versions (currently 3.9+).
+The library supports all actively maintained Python versions (currently 3.10+).
 
 ### Zero Runtime Overhead
 The `Falsifier` class imposes minimal runtime overhead beyond basic object creation costs.
