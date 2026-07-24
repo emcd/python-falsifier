@@ -52,6 +52,15 @@ falsey objects** - objects that evaluate to ``False`` in boolean contexts.
 Installation 📦
 ===============================================================================
 
+Install via `uv <https://github.com/astral-sh/uv/blob/main/README.md>`_ ``pip``
+command:
+
+::
+
+    uv pip install falsifier
+
+Or, install via ``pip``:
+
 ::
 
     pip install falsifier
