@@ -76,6 +76,20 @@ False
 >>> obj == obj
 True
 
+Subclass to create domain-specific falsey types:
+
+>>> class AbsentValue( Falsifier ):
+...     ''' Represents an explicitly absent value. '''
+...     def __str__( self ) -> str:
+...         return 'absent'
+>>> absent = AbsentValue( )
+>>> bool( absent )
+False
+
+See `documentation/examples/objects.rst
+<https://emcd.github.io/python-falsifier/stable/sphinx-html/examples/objects.html>`_
+for more patterns, including singletons and collection usage.
+
 
 Use Cases 🎯
 ===============================================================================
@@ -84,29 +98,6 @@ Use Cases 🎯
   evaluate to ``False``.
 * 🕳️ **Absence Indicators**: Foundation for creating objects that represent
   absence or invalidity when ``None`` or ``False`` may be valid.
-
-
-Installation 📦
-===============================================================================
-
-Method: Install Python Package
--------------------------------------------------------------------------------
-
-Install via `uv <https://github.com/astral-sh/uv/blob/main/README.md>`_ ``pip``
-command:
-
-::
-
-    uv pip install falsifier
-
-Or, install via ``pip``:
-
-::
-
-    pip install falsifier
-
-
-.. todo:: Provide usage examples and additional content.
 
 
 Contribution 🤝
