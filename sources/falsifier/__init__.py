@@ -34,7 +34,7 @@ from . import __
 from .classes import *
 
 
-__version__ = '2.2'
+__version__ = '2.3a0'
 
 
 __.ccstd.finalize_module( __name__, recursive = True )
