@@ -1,32 +1,20 @@
 {
   "mcpServers": {
-    "pyright": {
-      "command": "mcp-language-server",
+    "agentmux": {
+      "command": "agentmux",
       "args": [
-        "--lsp",
-        "pyright-langserver",
-        "--workspace",
-        ".",
-        "--",
-        "--stdio"
+        "host", "mcp"
       ]
     },
-    "ruff": {
-       "command": "mcp-language-server",
-       "args": [
-         "--lsp",
-         "ruff",
-         "--workspace",
-         ".",
-         "--",
-         "server",
-         "--preview"
-      ]
+    "context7": {
+      "command": "npx",
+      "args": [ "-y", "@upstash/context7-mcp" ]
     },
-    "text-editor": {
-      "command": "uvx",
+    "nb": {
+      "command": "nb-mcp",
       "args": [
-        "mcp-text-editor"
+        "--notebook", "python-falsifier",
+        "--no-commit-signing"
       ]
     }
   }
