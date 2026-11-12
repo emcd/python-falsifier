@@ -15,6 +15,8 @@ The same person may wear more than one role only when the project explicitly all
 
 Send the initial packet to the Tier-1 Reviewer only. Do not Cc the Tier-2 Reviewer, and do not send both tiers the same packet at once. Except for cross-functional work, a Tier-1 review goes to the designated Tier-1 Reviewer for that lane, area, project, or team. Do not fan the same packet across every Tier-1 seat.
 
+Reviews are bilateral: the author and the active reviewer only. Do not Cc anyone beyond the active pair — not the other reviewer, not the coordinator. The integrator enters only at the merge request, after final approval and autosquash, with cleaned hashes, tree identity against the reviewed tree, validation summary, and approval trail.
+
 The Tier-2 aim is how we spend scarce Tier-2 credits. It is not a scope limit. Either reviewer may inspect any part of the stack, including a later fix, and may take an integrative or a pinhole view. Author concerns, suggested focus, or "please only look at X" are context, not a restriction. Do not dictate what a reviewer reviews.
 
 The author may request a Tier-2 review after Tier-1 approval. The Tier-1 Reviewer and the operator may require one. Skip it for mechanical or already-patterned changes unless one of them wants it.
@@ -48,10 +50,17 @@ The agreed `<local-integration-base>` is a Git ref in the current repository, su
 ## Integrator flow
 
 1. Confirm the stack is approved by every engaged tier and already cleaned (fixups autosquashed). If fixups are still present, send it back to the author to fold before merge — do not start a content review.
-2. Confirm the cleaned stack is based on the **current** `<local-integration-base>`, and that the handoff names every engaged tier and states that each has approved. If the base has advanced (stale-base stack), **refuse the merge handoff** and route the author to rebase first. After rebase: a byte-identical stack may return as a merge handoff with fresh lint/test evidence; a non-identical stack follows the non-identical rebase rule under Review tiers. Do not merge a stale-base cleaned stack.
-3. If the base is current and the merge is otherwise clear, merge approved review branches with `--no-ff` when preserving a delegated-work or lane boundary; this creates a clear integration point and avoids mutually rebasing branches into increasingly long histories.
-4. When the branch owner is also the project owner, the owner merges the reviewer-approved cleaned stack directly after human approval, without a coordinator handoff.
-5. Merge/push only after explicit human approval.
+2. Fetch the approved work from the author's repository by filesystem path:
+
+   ```sh
+   git fetch /path/to/author/repo <merge-target>
+   ```
+
+   Repositories in the clones-of-clone topology do not share objects. A commit hash is not resolvable in your repository until you fetch from the repository that holds it. The review packet must include the author's repository filesystem path and the intended merge target branch for this reason.
+3. Confirm the fetched stack is based on the **current** `<local-integration-base>`, and that the handoff names every engaged tier and states that each has approved. If the base has advanced (stale-base stack), **refuse the merge handoff** and route the author to rebase first. After rebase: a byte-identical stack may return as a merge handoff with fresh lint/test evidence; a non-identical stack follows the non-identical rebase rule under Review tiers. Do not merge a stale-base cleaned stack.
+4. If the base is current and the merge is otherwise clear, merge the fetch head with `--no-ff` when preserving a delegated-work or lane boundary; this creates a clear integration point and avoids mutually rebasing branches into increasingly long histories.
+5. When the branch owner is also the project owner, the owner merges the reviewer-approved cleaned stack directly after human approval, without a coordinator handoff.
+6. Merge/push only after explicit human approval.
 
 Prefer reviewing commits by hash. Always give the path to your repository as well: its objects are not shared with the reviewer's repository, so hashes alone are not reviewable until fetched. Use patch artifacts only as a fallback when the reviewer cannot access the repository directly.
 
@@ -61,6 +70,7 @@ For non-trivial delegated work, review requests should include:
 
 - Base ref for rebase: the `<local-integration-base>` to use for `git rebase` or `git rebase -i --autosquash`.
 - Intended merge target: the branch/ref where the work should eventually land. This may differ from the rebase base, and may be a shared branch.
+- Author's repository filesystem path: the path to the author's repository, required for fetching the work in topologies without shared objects.
 - Complete commit list with hashes and one-line descriptions.
 - Validation commands run and results, including skipped checks or known gaps.
 - Intended contract: what must be true after the change lands.
@@ -69,7 +79,7 @@ For non-trivial delegated work, review requests should include:
 
 Author-provided review concerns are supplemental context, not a limit on review scope, and not an instruction the reviewer must follow. Independent inspection remains the reviewer responsibility.
 
-Packets to the **integrator** after final approval are merge handoffs: cleaned commit list, validation status, base/merge refs, and every engaged tier with its approval. They apply when the base is unchanged since final approval (autosquash-only hash changes are fine), or after a post-approval rebase that leaves a **byte-identical** stack with author re-validation noted. They are not a review packet. A non-identical post-approval rebase follows the non-identical rebase rule under Review tiers, not a merge handoff.
+Packets to the **integrator** after final approval are merge handoffs: cleaned commit list, validation status, base/merge refs, author's repository filesystem path, and every engaged tier with its approval. They apply when the base is unchanged since final approval (autosquash-only hash changes are fine), or after a post-approval rebase that leaves a **byte-identical** stack with author re-validation noted. They are not a review packet. A non-identical post-approval rebase follows the non-identical rebase rule under Review tiers, not a merge handoff.
 
 # Reviewing Stacked Commits
 
