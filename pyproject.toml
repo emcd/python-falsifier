@@ -99,7 +99,6 @@ dependencies = [
   'furo',
   'isort',
   'myst-parser',
-  'pre-commit',
   'pyright',
   'pytest',
   'ruff',
